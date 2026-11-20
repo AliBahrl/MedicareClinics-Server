@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "doctor_services",
+  "info": {
+    "singularName": "doctor-service",
+    "pluralName": "doctor-services",
+    "displayName": "DoctorService"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "doctor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::doctor.doctor",
+      "inversedBy": "doctor_services"
+    },
+    "service": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::service.service",
+      "inversedBy": "doctor_services"
+    },
+    "price": {
+      "type": "decimal"
+    }
+  }
+}

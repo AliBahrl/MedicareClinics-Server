@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "appointments",
+  "info": {
+    "singularName": "appointment",
+    "pluralName": "appointments",
+    "displayName": "Appointment"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "doctor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::doctor.doctor",
+      "inversedBy": "appointments"
+    },
+    "clerkUserId": {
+      "type": "string"
+    },
+    "patientName": {
+      "type": "string"
+    },
+    "patientPhone": {
+      "type": "string"
+    },
+    "patientEmail": {
+      "type": "email"
+    },
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "time"
+    },
+    "bookingStatus": {
+      "type": "enumeration",
+      "enum": [
+        "booked",
+        "cancelled"
+      ]
+    }
+  }
+}

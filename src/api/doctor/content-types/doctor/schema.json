@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "doctors",
+  "info": {
+    "singularName": "doctor",
+    "pluralName": "doctors",
+    "displayName": "Doctor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "specialty": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::specialty.specialty",
+      "inversedBy": "doctors"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "experienceYears": {
+      "type": "integer"
+    },
+    "education": {
+      "type": "string"
+    },
+    "languages": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "decimal"
+    },
+    "reviewsCount": {
+      "type": "integer"
+    },
+    "doctor_services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::doctor-service.doctor-service",
+      "mappedBy": "doctor"
+    },
+    "appointments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::appointment.appointment",
+      "mappedBy": "doctor"
+    },
+    "bio": {
+      "type": "text"
+    },
+    "availabilities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::availability.availability",
+      "mappedBy": "doctor"
+    }
+  }
+}

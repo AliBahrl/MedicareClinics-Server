@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "whu_choose_uses",
+  "info": {
+    "singularName": "whu-choose-us",
+    "pluralName": "whu-choose-uses",
+    "displayName": "WhyChooseUs"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "icon": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

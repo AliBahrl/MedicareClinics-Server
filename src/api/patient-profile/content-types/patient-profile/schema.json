@@ -1,0 +1,61 @@
+{
+  "kind": "collectionType",
+  "collectionName": "patient_profiles",
+  "info": {
+    "singularName": "patient-profile",
+    "pluralName": "patient-profiles",
+    "displayName": "PatientProfile"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "clerkUserId": {
+      "type": "string",
+      "unique": true
+    },
+    "dateOfBirth": {
+      "type": "date"
+    },
+    "gender": {
+      "type": "enumeration",
+      "enum": [
+        "Male",
+        "Female",
+        "Other"
+      ]
+    },
+    "phone": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "bloodType": {
+      "type": "enumeration",
+      "enum": [
+        "O_POSITIVE",
+        "O_NEGATIVE",
+        "A_POSITIVE",
+        "A_NEGATIVE",
+        "B_POSITIVE",
+        "B_NEGATIVE",
+        "AB_POSITIVE",
+        "AB_NEGATIVE"
+      ]
+    },
+    "allergies": {
+      "type": "string",
+      "default": "None"
+    },
+    "chronicConditions": {
+      "type": "string",
+      "default": "None"
+    },
+    "currentMedications": {
+      "type": "string",
+      "default": "None"
+    }
+  }
+}
