@@ -80,8 +80,6 @@ $RECYCLE.BIN/
 ssl
 .idea
 nbproject
-public/uploads/*
-!public/uploads/.gitkeep
 .tsbuildinfo
 .eslintcache
 
@@ -122,6 +120,7 @@ coverage
 ############################
 
 .env
+transfer_*.log
 license.txt
 exports
 .strapi
