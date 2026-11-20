@@ -4,7 +4,12 @@ const config: Core.Config.Middlewares = [
   'strapi::logger',
   'strapi::errors',
   'strapi::security',
-  'strapi::cors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: ['https://medicare-clinics-client.vercel.app' , 'http://localhost:5173']
+    }
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',
